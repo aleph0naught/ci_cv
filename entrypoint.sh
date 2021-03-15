@@ -1,7 +1,7 @@
 #!/bin/sh -l
 
 cd Resume
-pdflatex main.tex
+pdflatex -interaction=nonstopmode main.tex
 if [ -f "./main.pdf" ]; then
     echo "OK"
 else
