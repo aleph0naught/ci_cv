@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
     texlive-lang-cyrillic \
     texlive-science \
     cm-super \
-    texlive-generic-extra \
+    texlive-generic-extra
 
 COPY Resume /Resume
 COPY entrypoint.sh /entrypoint.sh
