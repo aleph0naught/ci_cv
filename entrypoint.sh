@@ -2,7 +2,7 @@
 
 set -e
 
-cd Resume
+ls
 pdflatex -interaction=nonstopmode main.tex
 
 if [ -f "./main.pdf" ]; then
