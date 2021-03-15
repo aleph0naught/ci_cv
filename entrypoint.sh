@@ -1,12 +1,11 @@
 #!/bin/sh -l
 
-set -e
+cd Resume
 
-ls
 pdflatex -interaction=nonstopmode main.tex
 
-if [ -f "./main.pdf" ]; then
-    echo "OK"
-else
-    echo "CE"
+COMPILE_STATUS=$?
+if [ $COMPILE_STATUS -ne 0 ]; then
+    echo "CV compilation failed"
+    exit $COMPILE_STATUS
 fi
