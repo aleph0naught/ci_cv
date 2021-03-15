@@ -1,0 +1,6 @@
+# action.yml
+name: 'Compile action'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
