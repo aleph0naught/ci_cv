@@ -15,7 +15,8 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
     texlive-generic-extra
 
 COPY Resume /Resume
-COPY entrypoint.sh /entrypoint.sh
+
+RUN cd Resume \
+    && pdflatex -interaction=nonstopmode main.tex
 
 CMD [ "bash" ]
-ENTRYPOINT ["/entrypoint.sh"]
