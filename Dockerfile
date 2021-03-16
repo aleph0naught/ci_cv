@@ -17,6 +17,6 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
 COPY Resume /
 
 ENTRYPOINT [ "pdflatex" ]
-CMD [ "-interaction=nonstopmode" ]
+CMD [ "-interaction=nonstopmode /main.tex" ]
 
 
