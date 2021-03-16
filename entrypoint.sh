@@ -9,7 +9,7 @@ if [ $ERROR_CODE -eq 0 ]; then
     echo "OK"
 else
     echo "CV Compilation Failed"
-    exit 1
+    exit $ERROR_CODE
 fi
 # if [ -f './main.pdf' ]; then
 #     echo "OK"
