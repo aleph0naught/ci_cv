@@ -16,5 +16,5 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
 
 COPY Resume /
 
-ENTRYPOINT [ "bash" ]
-CMD [ "ls" ]
+ENTRYPOINT [ "pdflatex" ]
+CMD [ "-interaction=nonstopmode", "Resume/main.tex" ]
