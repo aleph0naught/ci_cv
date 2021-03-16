@@ -17,4 +17,4 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
 COPY Resume /
 
 ENTRYPOINT [ "ls" ]
-CMD [ "/Resume" ]
+CMD [ "/" ]
