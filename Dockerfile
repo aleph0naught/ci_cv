@@ -15,5 +15,5 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
     texlive-generic-extra
 
 
-ENTRYPOINT [ "cat" ]
-CMD [ "Resume\main.tex" ]
+ENTRYPOINT [ "pdflatex" ]
+CMD [ "-interaction=nonstopmode" , "\Resume\main.tex" ]
