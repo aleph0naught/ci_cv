@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
     cm-super \
     texlive-generic-extra
 
-COPY Resume \
+COPY Resume /
 
-ENTRYPOINT [ "pdflatex" ]
-CMD [ "-interaction=nonstopmode" , ".\main.tex" ]
+ENTRYPOINT [ "ls" ]
+CMD [ "/Resume" ]
