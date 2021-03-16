@@ -4,8 +4,9 @@ cd Resume
 
 pdflatex -interaction=nonstopmode main.tex
 
-COMPILE_STATUS=$?
-if [ $COMPILE_STATUS -ne 0 ]; then
-    echo "CV compilation failed"
-    exit $COMPILE_STATUS
+if [ -f './main.pdf' ]; then
+    echo "OK"
+else
+    echo "CV Compilation Failed"
+    exit 1
 fi
