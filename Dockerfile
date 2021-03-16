@@ -15,4 +15,4 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
     texlive-generic-extra
 
 
-CMD pdflatex -interaction=nonstopmode Resume/main.tex
+CMD cd Resume
