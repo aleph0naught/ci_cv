@@ -1,3 +1,3 @@
 # My CV 2021
-Path to TeX: ci_cv/Resume/main.tex  
-Path to latest pdf: ci_cv/main_cv.pdf
+* [TeX file](./Resume/main.tex)
+* ![latest pdf](./main_cv.pdf)
