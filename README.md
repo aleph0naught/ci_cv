@@ -1,3 +1,4 @@
 # My CV 2021
 * [TeX file](./Resume/main.tex)
-* ![latest pdf](./main_cv.pdf)
+* [Latest pdf file](./main_cv.pdf)
+![CV](./main_cv.pdf)
