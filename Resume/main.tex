@@ -1,99 +1,185 @@
-\documentclass{resume}
-%Russian-specific packages
-%--------------------------------------
+% neomake: skip
+\documentclass{article}
+
+\usepackage{cmap}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{makecell}
 \usepackage[T2A]{fontenc}
-\usepackage{inputenc}
-\usepackage{babel}
-\usepackage{setspace}
-%--------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{fontawesome}
+\usepackage{verbatim}
+
+\usepackage{geometry}
+\geometry{top=10mm}
+\geometry{bottom=10mm}
+\geometry{left=15mm}
+\geometry{right=15mm}
+
+\pagenumbering{gobble}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks  = true,
+            linkcolor   = blue,
+            urlcolor    = blue,
+            citecolor   = black,
+            anchorcolor = black]{hyperref}
+
+\renewcommand{\maketitle}{
+    \Huge
+    \begin{center}
+        \textbf{Орлов Александр}
+    \end{center}
+
+    \small
+    \begin{center}
+    \faMobile \hspace{0.1cm} $\boldsymbol{+}$7(929)931-31-62 
+    \hfill
+    \faEnvelope \hspace{0.1cm} \href{mailto:orlovalex0703@gmail.com}{orlovalex0703@gmail.com}
+    \hfill
+    \faPaperPlane \hspace{0.1cm} \href{https://t.me/aleph0naught}{@aleph0naught}
+    \hfill
+    \faGithub \hspace{0.1cm} \href{https://github.com/aleph0naught}{aleph0naught}
+    \end{center}
+}
+
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bf\raggedright}{}{0.5em}{}[{\titlerule[1pt]}]
+\titlespacing{\section}{0pt}{3pt}{7pt}
+\titleformat{\subsection}{\large\bfseries\raggedright}{}{0em}{\underline}%[\rule{3cm}{.2pt}]
+\titlespacing{\subsection}{0pt}{7pt}{7pt}
+
+
+\newcommand{\entry}[3]{
+	\begin{tabular}{ c | c }
+    \begin{minipage}{0.05\linewidth}
+    	\begin{center}
+    		#1
+    	\end{center}
+    \end{minipage} 
+    &
+    \begin{minipage}{0.85\linewidth}
+        \textbf{#2} \\ \footnotesize{#3}
+    \end{minipage}
+    \end{tabular}
+}
+
+\newcommand{\interval}[2]{
+	#1 \\ $\downarrow$ \\ #2
+}
+
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+  
+  
+\setlist[itemize]{noitemsep, topsep=0pt}
 
 \begin{document}
+    \maketitle
+    \small
+    
+    \section{Образование}
+        \entry {\interval{2019}{н.в.}}
+        {Высшая школа экономики\\
+         Факультет компьютерных наук\\
+         Прикладная математика и информатика}
+        {Специализация <<Машинное обучение и приложения>>\\
+        Очная форма обучения, бакалавриат}
 
-\fontfamily{ppl}\selectfont
+    \section{Работа}
+        \entry {\interval{Июль 2021}{н.в.}}
+        {Тинькофф \\
+         Департамент рисков \\
+         Младший аналитик}
+        {Риск-аналитика:
+        	\begin{itemize}
+        		\item Расчет recovery для NPV моделей
+        		\item Разработка ML модели оценки recovery
+        		\item Создание регулярных отчетов по показателям collection
+        	\end{itemize}
+        }
+        
+        \vspace{.1cm}
+        
+        \entry {\interval{Апр. 2021}{Авг. 2021}}
+        {Высшая школа экономики \\
+         Факультет компьютерных наук \\
+         Международная лаборатория биоинформатики \\
+         Стажер-исследователь}
+        {Биоинформатика:
+        	\begin{itemize}
+        		\item Исследование вторичных структур ДНК
+        		\item Статистическая обработка биологических данных
+        	\end{itemize}
+        } 
+    
+    \section{Курсы}
+    
+    \entry {2021}
+        {Тинькофф образование\\
+        Анализ данных в индустрии}
+        {АБ-тесты, SQL, ML модели, визуализация, мобильная аналитика}
+    
+    \vspace{.1cm}
+    
+    \entry {2021}
+    {Coursera\\
+    Введение в машинное обучение}
+    {Линейные модели, метрические методы, решающие деревья, градиентный бустинг, кластеризация, PCA}
+      
+    \vspace{.1cm}
+    
+    \entry {2021}
+    {Stepik\\
+    Основы статистики}
+    {Статистические тесты, доверительные интервалы, линейная регрессия}
+    
+    \vspace{.1cm}
+    
+    \entry {2020}
+    {Институт биоинформатики\\
+    Летняя школа по биоинформатике}
+    {Алгоритмы и ML в биоинформатике}
+    
+    \section{Достижения}
+    
+    \entry {2021}
+        {Олимпиада студентов и выпускников <<Высшая лига>>\\
+        Прикладная математика и информатика}
+        {Диплом III степени}
+        
+    \vspace{.1cm}
+    
+    \entry {2019}
+    {Победитель и призер олимпиад школьников по математике}
+    {РЭ ВОШ, Ломоносов, Физтех}
 
-\noindent
-\begin{tabularx}{\linewidth}{@{}m{0.8\textwidth} m{0.2\textwidth}@{}}
-{
-    \Large{Орлов Александр} \newline
-    \small{
-        \clink{
-            \href{mailto:ayuorlov_1@edu.hse.ru}{ayuorlov\_1@edu.hse.ru} \textbf{·}
-            {\fontdimen2\font=0.75ex +79299313162}
-        } \newline
-        Королёв, Московская область
-    }
-} &
-{
-    \hfill
-    \includegraphics[width=3cm]{images/111.png}
-}
-\end{tabularx}
-\begin{center}
-\begin{tabularx}{\linewidth}{@{}*{2}{X}@{}}
-% left side %
-{
-    \csection{Образование}{\small
-        \begin{itemize}
-            % item 1 %
-            \item \frcontent{Прикладная математика и информатика, GPA: 8.43/10}{Высшая Школа Экономики, ФКН}{}{2023}
-            \item \frcontent{Лицей научно-инжереного профиля}{Королёв}{}{2019}
-        \end{itemize}
-    }
-    \csection{Опыт и Достижения}{\small
-        \begin{itemize}
-            % item 3 %
-            \item \frcontent{Летняя школа по биоинформатике}{Участник}{}{2020, 2021}
-            \item \frcontent{Введение в молекулярную биологию}{Stepik}{}{2019}
-            % item 1 %
-            \item \frcontent{Победитель и призер олимпиад школьников по математике}{Ломоносов, Курчатов, Физтех, РЭ ВОШ}{}{2019}
-            % item 2 %
-            \item \frcontent{Призер олимпиад школьников по физике}{Росатом, Ломоносов}{}{2019}
+    \section{Проекты}
+        
+    \entry {\interval{2020}{2021}}
+    {IQ-Beat\\
+    Стажер в проекте по анализу ЭКГ сигналов}
+    {Реализация пайплайна предобработки ЭКГ сигнала на Python3 (numpy, scipy, pandas)} 
+    
+    \vspace{.1cm}
+        
+    \entry {2019}
+    {Московская школа программистов Яндекс\\
+    Веб-приложение агрегатор преподавателей}
+    {Реализация веб-сервиса на Python3 (Django, sqlite3)} 
 
-        \end{itemize}
-    }
-}
-% end left side %
-&
-% right side %
-{
-    \csection{Навыки}{\small
-        \begin{itemize}
-            \item \textbf{Технологии} \newline
-            {\footnotesize Python, NumPy, Scipy, SQL, Linux, Bash, Git, LaTeX, MEGA, PyMol, C++, gdb}{}{}
-            \item \textbf{Математические предметы} \newline
-            {\footnotesize Линейная алгебра и геометрия, Теория вероятностей, Матричные вычисления, Математический анализ, Дискретная математика, Дифференциальные уравнения,  Математическая статистика (в процессе прохождения университетского курса) }{}{}
-        \end{itemize}
-    }
-    \csection{Проекты}{\small
-        \begin{itemize}
-            \item \frcontent{IQ-Beat}{Стажер в проекте по анализу ЭКГ сигналов}{}{Python, Bash, NumPy, Scipy, Pandas, Git}
-            \item \frcontent{Веб-приложение агрегатор преподавателей}{Python, Django, sqlite3}{}{}
-        \end{itemize}
-    }
-    \csection{Интересы}{\small
-        \begin{itemize}
-            \item {\footnotesize Решение интересных задач}
-            \item {\footnotesize Математика}
-            \item {\footnotesize Биология}
-            \item {\footnotesize Путешествия}
-        \end{itemize}
-    }
-}
-
-\end{tabularx}
-\end{center}
-\csection{О себе}{\small
-\begin{spacing}{1}
-\noindent
-\begin{itemize}
-            \item {\footnotesize Студент 2 курса ПМИ ФКН ВШЭ. Увлекаюсь математикой, анализом данных и их приложениями к биологии}
-            \item {\footnotesize В свободное от учебы время занимаюсь
-изучением биоинформатики, молекулярной биологии, анализом ЭКГ в рамках проекта или отдыхаю за просмотром кино}
-            \item {\footnotesize Любимые математические предметы: теория вероятностей, матричные вычисления, дискретная математика; Любимые биологические предметы: молекулярная биология, микробиология}
-            \item {\footnotesize Прошел факультатив по функциональному анализу, сейчас прохожу факультатив по дополнительным главам теории вероятностей. Прохожу майнор по биоинформатике. После майнора научился пользоваться программами BLAST, MEGA, PyMol, знаю основные алгоритмы выравнивания последовательностей (программировал некоторые из них на Летней школе по биоинформатике), знаю основные идеи алгоритмов, лежащих в основе предсказания генов. Еще со школы очень люблю биологию и хочу учиться использовать свои знания в этой области!}
-\end{itemize}
-\end{spacing}
-}
-
-
+    \section{Навыки}
+    	\begin{tabular}{ >{\bfseries}r | l }
+    		Языки программирования & Python3, C/C\texttt{++}, SQL, Bash, assembly \\
+    		Технологии & RabbitMQ, gRPC, Greenplum  \\
+    		Фреймворки и библиотеки & sklearn, pytorch, pyspark, numpy, pandas, matplotlib  \\
+    		Инструменты & Linux, Git, Jupyter notebook, gdb, Zeppelin, Tableau \\
+    		Теория & \specialcell{Машинное обучение, глубинное обучение, прикладная статистика,\\распределенные системы, алгоритмы и структуры данных} \\
+    		Языки & Русский (родной), English (intermediate)
+    	\end{tabular} 
 \end{document}
